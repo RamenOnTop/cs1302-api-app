@@ -38,9 +38,19 @@ public class ApiApp extends Application {
     private VBox leftInfo;
     private VBox rightInfo;
 
+    private VBox sTitle;
+    private VBox hTitle;
+    private VBox wTitle;
+    private VBox wdTitle;
+
     private ImageView staticMap;
     private ImageView heatMap;
     private ImageView weatherVisual;
+
+    private Label asTitle;
+    private Label ahTitle;
+    private Label awTitle;
+    private Label awdTitle;
 
     private Text weatherInfo;
     private TextFlow weatherInfoContainer;
@@ -276,58 +286,51 @@ public class ApiApp extends Application {
      */
     public ApiApp() {
         root = new VBox();
-
         this.topLayer = new HBox(10);
         this.topLayer.setAlignment(Pos.CENTER);
-
         this.locationLabel = new Label("Location: Unknown");
         this.getLocation = new Button("Get Location");
-
         this.getLocation.setOnAction(event -> {
             this.locationVerification();
         });
-
+        this.sTitle = new VBox();
+        this.hTitle = new VBox();
+        this.wTitle = new VBox();
+        this.wdTitle = new VBox();
+        this.asTitle = new Label("Static Map");
+        this.ahTitle = new Label("Air Quality");
+        this.awTitle = new Label("Weather Visual");
+        this.awdTitle = new Label("Weather Description");
         this.ipBox = new ComboBox<String>(FXCollections.observableArrayList(types));
         this.ipBox.getSelectionModel().select("My Location");
-
         this.searchLabel = new Label("Input:");
-
         this.searchText = new TextField("Defualt");
-
         this.infoLayer = new HBox();
-
         this.leftInfo = new VBox();
         this.rightInfo = new VBox();
         this.progressBarLayer = new HBox();
-
         this.staticMap = new ImageView();
         this.staticMap.setFitWidth(350);
         this.staticMap.setFitHeight(250);
         this.staticMap.setPreserveRatio(false);
         this.staticMap.setImage(new Image("file:resources/readme-banner.png"));
-
         this.heatMap = new ImageView();
         this.heatMap.setFitWidth(350);
         this.heatMap.setFitHeight(250);
         this.heatMap.setPreserveRatio(false);
         this.heatMap.setImage(new Image("file:resources/readme-banner.png"));
-
         this.weatherVisual = new ImageView();
         this.weatherVisual.setFitWidth(350);
         this.weatherVisual.setFitHeight(250);
         this.weatherVisual.setPreserveRatio(false);
         this.weatherVisual.setImage(new Image("file:resources/readme-banner.png"));
-
         this.weatherInfo = new Text();
         this.weatherInfo.wrappingWidthProperty().set(400);
-
         this.weatherInfoContainer = new TextFlow(weatherInfo);
-
         this.scrollPane = new ScrollPane(weatherInfoContainer);
         this.scrollPane.setFitToWidth(true);
         this.scrollPane.setPrefHeight(250);
         this.scrollPane.setPrefWidth(350);
-
         this.progressBar = new ProgressBar();
         this.progressBar.setProgress(0.0);
         this.progressBar.setPrefWidth(700);
@@ -341,8 +344,12 @@ public class ApiApp extends Application {
         this.topLayer.getChildren().addAll(locationLabel, searchLabel,
                                            searchText, ipBox, getLocation);
         this.infoLayer.getChildren().addAll(leftInfo, rightInfo);
-        this.leftInfo.getChildren().addAll(staticMap, heatMap);
-        this.rightInfo.getChildren().addAll(weatherVisual, scrollPane);
+        this.leftInfo.getChildren().addAll(sTitle, hTitle);
+        this.sTitle.getChildren().addAll(asTitle,staticMap);
+        this.hTitle.getChildren().addAll(ahTitle,heatMap);
+        this.rightInfo.getChildren().addAll(wTitle, wdTitle);
+        this.wTitle.getChildren().addAll(awTitle, weatherVisual);
+        this.wdTitle.getChildren().addAll(awdTitle, scrollPane);
         this.progressBarLayer.getChildren().addAll(progressBar);
     }
 

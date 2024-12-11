@@ -1,15 +1,41 @@
 package cs1302.api;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 /**
  * GoogleMapsApiResponse class extends BaseImageApiResponse and
  * provieds structure and response from the GoogleMapsStaticMap Api call.
  */
 public class GoogleMapsApiResponse extends BaseImageApiResponse {
 
+    private String configPath = "resources/config.properties";
     // url needed to make the call
     private String url = "https://maps.googleapis.com/maps/api/staticmap";
     // apikey needed to make the call
-    private String apiKey = "AIzaSyCcD9l6CJk4o4RXdsASeRjhB1CJ4H6o9cw";
+    private String apiKey;
+
+
+    /**
+     * Attempts to retrieve Google Api Key.
+     *
+     * @throws RuntimeException if unable to get Key
+     */
+    public void getApiKey() {
+
+        try (FileInputStream configFileStream = new FileInputStream(configPath)) {
+
+            Properties config = new Properties();
+            config.load(configFileStream);
+            this.apiKey = config.getProperty("GoogleApi.key");
+
+        } catch (IOException e) {
+
+            throw new RuntimeException("Unexpected error when trying to retrivie API key"
+                                       + " please try again");
+        }
+    }
 
     /**
      * Creates valid URI to make a valid call to the Google Maps Static Api.
@@ -18,6 +44,8 @@ public class GoogleMapsApiResponse extends BaseImageApiResponse {
      */
     @Override
     public void createURI(String... params) {
+
+        getApiKey();
 
         try {
 

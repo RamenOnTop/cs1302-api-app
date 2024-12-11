@@ -1,0 +1,131 @@
+cs1302-api-app:
+total 68
+-rw-r--r--. 1 myid 10720 Dec 10 21:34 APPENDIX_API.md
+-rw-r--r--. 1 myid  3426 Dec 10 21:31 APPENDIX_GIT.md
+drwxr-xr-x. 2 myid    59 Dec 10 21:30 meta
+-rw-r--r--. 1 myid  8409 Dec 10 21:30 pom.xml
+-rwxr-xr-x. 1 myid   105 Dec  7 20:03 prepare-merge.sh
+-rw-r--r--. 1 myid 28844 Dec 10 21:34 README.md
+-rw-r--r--. 1 myid     0 Dec 10 22:16 rec13042
+drwxr-xr-x. 2 myid    98 Dec 10 21:32 resources
+-rwxr-xr-x. 1 myid   119 Dec  7 20:03 run.sh
+drwxr-xr-x. 4 myid    42 Dec  7 20:03 src
+drwxr-xr-x. 5 myid   104 Dec 10 22:10 target
+
+cs1302-api-app/meta:
+total 8
+-rw-r--r--. 1 myid 2151 Dec 10 22:07 ATTRIBUTION.md
+-rw-r--r--. 1 myid 3059 Dec 10 21:49 DEADLINE.md
+
+cs1302-api-app/resources:
+total 2060
+-rw-r--r--. 1 myid      64 Dec 10 21:32 config.properties
+-rw-r--r--. 1 myid  582183 Dec  7 20:03 readme-banner.png
+-rw-r--r--. 1 myid 1518790 Dec 10 21:30 readme-newrepo.png
+
+cs1302-api-app/src:
+total 0
+drwxr-xr-x. 3 myid 26 Dec  7 20:03 main
+drwxr-xr-x. 3 myid 50 Dec  7 20:03 site
+
+cs1302-api-app/src/main:
+total 0
+drwxr-xr-x. 3 myid 56 Dec  7 20:03 java
+
+cs1302-api-app/src/main/java:
+total 4
+drwxr-xr-x. 3 myid  95 Dec 10 20:27 cs1302
+-rw-r--r--. 1 myid 373 Dec  7 20:03 module-info.java
+
+cs1302-api-app/src/main/java/cs1302:
+total 12
+drwxr-xr-x. 2 myid 4096 Dec 10 21:53 api
+-rw-r--r--. 1 myid 1467 Dec 10 20:27 BaseImageApiResponse.java
+-rw-r--r--. 1 myid 1707 Dec 10 20:23 BaseJsonResponse.java
+
+cs1302-api-app/src/main/java/cs1302/api:
+total 52
+-rw-r--r--. 1 myid 13230 Dec 10 21:53 ApiApp.java
+-rw-r--r--. 1 myid  1285 Dec  7 20:03 ApiDriver.java
+-rw-r--r--. 1 myid  2149 Dec 10 17:17 GoogleMapsAirQualityResponse.java
+-rw-r--r--. 1 myid  1252 Dec 10 17:14 GoogleMapsApiResponse.java
+-rw-r--r--. 1 myid  3172 Dec 10 17:10 IPApiResponse.java
+-rw-r--r--. 1 myid  4092 Dec 10 18:51 NWSResponse.java
+-rw-r--r--. 1 myid  4332 Dec  7 20:03 OpenLibrarySearchApi.java
+-rw-r--r--. 1 myid  1689 Dec 10 21:32 PropertiesExample.java
+-rw-r--r--. 1 myid   960 Dec 10 20:27 WeatherVisualResponse.java
+
+cs1302-api-app/src/site:
+total 4
+drwxr-xr-x. 2 myid  33 Dec  7 20:03 markdown
+-rw-r--r--. 1 myid 424 Dec  7 20:03 site.xml
+
+cs1302-api-app/src/site/markdown:
+total 4
+-rw-r--r--. 1 myid 133 Dec  7 20:03 index.md.vm
+
+cs1302-api-app/target:
+total 4
+drwxr-xr-x. 3 myid  145 Dec 10 22:10 classes
+drwxr-xr-x. 3 myid   25 Dec 10 22:10 generated-sources
+drwxr-xr-x. 3 myid   43 Dec 10 22:10 maven-status
+-rw-r--r--. 1 myid 1299 Dec 10 22:10 modulepath
+
+cs1302-api-app/target/classes:
+total 2064
+-rw-r--r--. 1 myid      64 Dec 10 22:10 config.properties
+drwxr-xr-x. 3 myid      25 Dec 10 22:10 cs1302
+-rw-r--r--. 1 myid     356 Dec 10 22:10 module-info.class
+-rw-r--r--. 1 myid  582183 Dec 10 22:10 readme-banner.png
+-rw-r--r--. 1 myid 1518790 Dec 10 22:10 readme-newrepo.png
+
+cs1302-api-app/target/classes/cs1302:
+total 4
+drwxr-xr-x. 2 myid 4096 Dec 10 22:10 api
+
+cs1302-api-app/target/classes/cs1302/api:
+total 96
+-rw-r--r--. 1 myid 12953 Dec 10 22:10 ApiApp.class
+-rw-r--r--. 1 myid  1503 Dec 10 22:10 ApiDriver.class
+-rw-r--r--. 1 myid  2331 Dec 10 22:10 BaseImageApiResponse.class
+-rw-r--r--. 1 myid  2179 Dec 10 22:10 BaseJsonResponse.class
+-rw-r--r--. 1 myid  1982 Dec 10 22:10 GoogleMapsAirQualityResponse.class
+-rw-r--r--. 1 myid  1944 Dec 10 22:10 GoogleMapsApiResponse.class
+-rw-r--r--. 1 myid  2223 Dec 10 22:10 IPApiResponse.class
+-rw-r--r--. 1 myid   975 Dec 10 22:10 IPApiResponse$LocationResponse.class
+-rw-r--r--. 1 myid  4516 Dec 10 22:10 NWSResponse.class
+-rw-r--r--. 1 myid   639 Dec 10 22:10 NWSResponse$ForecastsResponse.class
+-rw-r--r--. 1 myid   554 Dec 10 22:10 NWSResponse$ForecastsResponse$Period.class
+-rw-r--r--. 1 myid   700 Dec 10 22:10 NWSResponse$ForecastsResponse$Properties.class
+-rw-r--r--. 1 myid   554 Dec 10 22:10 NWSResponse$PointsResponse.class
+-rw-r--r--. 1 myid   531 Dec 10 22:10 NWSResponse$PointsResponse$Properties.class
+-rw-r--r--. 1 myid  5993 Dec 10 22:10 OpenLibrarySearchApi.class
+-rw-r--r--. 1 myid   493 Dec 10 22:10 OpenLibrarySearchApi$OpenLibraryDoc.class
+-rw-r--r--. 1 myid   617 Dec 10 22:10 OpenLibrarySearchApi$OpenLibraryResult.class
+-rw-r--r--. 1 myid  1688 Dec 10 22:10 PropertiesExample.class
+-rw-r--r--. 1 myid  1065 Dec 10 22:10 WeatherVisualResponse.class
+
+cs1302-api-app/target/generated-sources:
+total 0
+drwxr-xr-x. 2 myid 10 Dec 10 22:10 annotations
+
+cs1302-api-app/target/generated-sources/annotations:
+total 0
+
+cs1302-api-app/target/maven-status:
+total 0
+drwxr-xr-x. 3 myid 29 Dec 10 22:10 maven-compiler-plugin
+
+cs1302-api-app/target/maven-status/maven-compiler-plugin:
+total 0
+drwxr-xr-x. 3 myid 37 Dec 10 22:10 compile
+
+cs1302-api-app/target/maven-status/maven-compiler-plugin/compile:
+total 0
+drwxr-xr-x. 2 myid 64 Dec 10 22:10 default-compile
+
+cs1302-api-app/target/maven-status/maven-compiler-plugin/compile/default-compile:
+total 8
+-rw-r--r--. 1 myid 813 Dec 10 22:10 createdFiles.lst
+-rw-r--r--. 1 myid 966 Dec 10 22:10 inputFiles.lst
+/home/myid/ror83865/cs1302-api-app:/home/myid/csci-1302
