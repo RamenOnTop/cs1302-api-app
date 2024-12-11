@@ -160,7 +160,7 @@ public class ApiApp extends Application {
                 ipAddress = localHost.getHostAddress();
             } else {
                 ipAddress = IP;
-            };
+            }
             this.ipResponse = new IPApiResponse();
             this.ipResponse.createURI(ipAddress);
             this.ipResponse.createResults();
@@ -173,6 +173,11 @@ public class ApiApp extends Application {
             String countryName = (String) results[2];
             String latitude = (String) results[3];
             String longitude = (String) results[4];
+            if (city == null || region == null || countryName == null ||
+                latitude == null || longitude == null) {
+                throw new IllegalArgumentException("IP does not give specifc enough infomation"
+                                                   + " please try with a new one");
+            }
             this.displayWeatherMap(latitude, longitude);
             Platform.runLater(() -> {
                 this.progressBar.setProgress(2.0 / 9.0);
@@ -182,9 +187,6 @@ public class ApiApp extends Application {
                 this.progressBar.setProgress(3.0 / 9.0);
             });
             this.displayStaticMap(city, countryName);
-            Platform.runLater(() -> {
-                this.progressBar.setProgress(4.0 / 9.0);
-            });
             String weatherI = this.getWeatherInformation(latitude, longitude);
             Platform.runLater(() -> {
                 this.progressBar.setProgress(5.0 / 9.0);
@@ -209,7 +211,7 @@ public class ApiApp extends Application {
     /**
      * Makes thread and calls the useIPData method.
      *
-     * @param Check the string and identifier passed through
+     * @param check the string and identifier passed through
      */
     public void makeThread(String check) {
         this.getLocation.setDisable(true);
